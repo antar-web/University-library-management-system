@@ -1,0 +1,1074 @@
+/* ============================================================
+   Library Management System - Custom Styles
+   Professional Blue & Dark Gray Theme
+   ============================================================ */
+
+:root {
+    --primary-blue: #1a56db;
+    --primary-dark: #1e293b;
+    --primary-light: #3b82f6;
+    --accent: #0ea5e9;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --gray-900: #0f172a;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --info: #06b6d4;
+    --sidebar-width: 250px;
+    --header-height: 0px;
+}
+
+/* ============================================================
+   Base & Typography
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--gray-50);
+    color: var(--gray-800);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-blue);
+}
+
+/* ============================================================
+   Login Page Styles
+   ============================================================ */
+.login-page {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #1a56db 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 32px 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-icon {
+    color: var(--primary-blue);
+    margin-bottom: 16px;
+}
+
+.login-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 4px;
+}
+
+.login-footer {
+    text-align: center;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 20px;
+    margin-top: 24px;
+}
+
+/* ============================================================
+   Dashboard Layout (Sidebar + Main Content)
+   ============================================================ */
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: var(--sidebar-width);
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 20px 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ============================================================
+   TOP NAVIGATION BAR
+   ============================================================ */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    right: 0;
+    height: 60px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    z-index: 99;
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar-brand {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.topbar-brand i {
+    color: #3a86ff;
+    font-size: 20px;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Admin badge — soft glowing capsule */
+.admin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(58, 134, 255, 0.12);
+    border: 1px solid rgba(58, 134, 255, 0.2);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 0 15px rgba(58, 134, 255, 0.08);
+    transition: all 0.3s ease;
+}
+.admin-badge i {
+    font-size: 16px;
+    color: #3a86ff;
+}
+.admin-badge:hover {
+    background: rgba(58, 134, 255, 0.18);
+    box-shadow: 0 0 20px rgba(58, 134, 255, 0.15);
+}
+
+/* Crimson sign-out button */
+.topbar-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 18px;
+    border-radius: 999px;
+    border: 1.5px solid #ff007f;
+    background: transparent;
+    color: rgba(255, 0, 127, 0.75);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.topbar-logout i {
+    font-size: 15px;
+    color: inherit;
+}
+.topbar-logout:hover {
+    background: linear-gradient(135deg, #ff007f, #d4006e);
+    color: #ffffff !important;
+    border-color: transparent;
+    box-shadow: 0 4px 20px rgba(255, 0, 127, 0.3);
+    transform: translateY(-1px);
+}
+
+.sidebar hr {
+    margin: 10px 16px;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.sidebar-nav .nav-item {
+    margin: 2px 8px;
+}
+
+.sidebar-nav .nav-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px 10px 20px;
+    color: var(--gray-400);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-nav .nav-link i {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* ----- HOVER: per-item neon accent colors + slide right ----- */
+.sidebar-nav .nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    transform: translateX(5px);
+}
+
+/* Dashboard   → Blue   */  .sidebar-nav .nav-item:nth-child(1) .nav-link:hover i { color: #3a86ff; }
+/* Books       → Mint   */  .sidebar-nav .nav-item:nth-child(2) .nav-link:hover i { color: #00f5d4; }
+/* Categories  → Mint   */  .sidebar-nav .nav-item:nth-child(3) .nav-link:hover i { color: #00f5d4; }
+/* Members     → Cyan   */  .sidebar-nav .nav-item:nth-child(4) .nav-link:hover i { color: #00b4d8; }
+/* Issue Book  → Amber  */  .sidebar-nav .nav-item:nth-child(5) .nav-link:hover i { color: #ff9f1c; }
+/* Issued Books→ Amber  */  .sidebar-nav .nav-item:nth-child(6) .nav-link:hover i { color: #ff9f1c; }
+/* Return Book → Amber  */  .sidebar-nav .nav-item:nth-child(7) .nav-link:hover i { color: #ff9f1c; }
+/* Returned His→ Violet */  .sidebar-nav .nav-item:nth-child(8) .nav-link:hover i { color: #a78bfa; }
+
+/* ----- ACTIVE LINK: Royal Blue → Electric Violet gradient + glow ----- */
+.sidebar-nav .nav-link.active {
+    background: linear-gradient(135deg, #3a86ff, #8338ec) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 20px rgba(58, 134, 255, 0.35);
+    border-left: 3px solid #00f5d4;
+}
+
+.sidebar-nav .nav-link.active i {
+    color: #fff !important;
+}
+
+/* Per-item active left border colors */
+.sidebar-nav .nav-item:nth-child(1) .nav-link.active { border-left-color: #3a86ff; }
+.sidebar-nav .nav-item:nth-child(2) .nav-link.active { border-left-color: #00f5d4; }
+.sidebar-nav .nav-item:nth-child(3) .nav-link.active { border-left-color: #00f5d4; }
+.sidebar-nav .nav-item:nth-child(4) .nav-link.active { border-left-color: #00b4d8; }
+.sidebar-nav .nav-item:nth-child(5) .nav-link.active { border-left-color: #ff9f1c; }
+.sidebar-nav .nav-item:nth-child(6) .nav-link.active { border-left-color: #ff9f1c; }
+.sidebar-nav .nav-item:nth-child(7) .nav-link.active { border-left-color: #ff9f1c; }
+.sidebar-nav .nav-item:nth-child(8) .nav-link.active { border-left-color: #a78bfa; }
+
+.sidebar-footer {
+    padding: 12px 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-footer .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gray-400);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-footer .nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ---- Crimson-outline logout button ---- */
+.sidebar-footer .nav-link.logout-link {
+    border: 1.5px solid rgba(255, 107, 107, 0.35);
+    background: transparent;
+    color: rgba(255, 107, 107, 0.8);
+    border-radius: 8px;
+    padding: 8px 14px;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+.sidebar-footer .nav-link.logout-link:hover {
+    background: rgba(255, 107, 107, 0.15);
+    border-color: #ff6b6b;
+    color: #ff6b6b;
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.2);
+}
+.sidebar-footer .nav-link.logout-link i {
+    color: inherit;
+}
+
+.admin-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--gray-500);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 84px 32px 24px;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin: 0;
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.dashboard-card {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.dashboard-card .card-header {
+    background: rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px 20px;
+}
+
+.dashboard-card .card-body {
+    padding: 20px;
+}
+
+.dashboard-card .card-footer {
+    background: rgba(255, 255, 255, 0.04);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 20px;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* ============================================================
+   Stat Cards
+   ============================================================ */
+.stat-card {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.stat-books .stat-icon {
+    background: #eff6ff;
+    color: var(--primary-blue);
+}
+
+.stat-members .stat-icon {
+    background: #f0fdf4;
+    color: var(--success);
+}
+
+.stat-issued .stat-icon {
+    background: #fffbeb;
+    color: var(--warning);
+}
+
+.stat-returned .stat-icon {
+    background: #f0f9ff;
+    color: var(--info);
+}
+
+.stat-fine .stat-icon {
+    background: #fef2f2;
+    color: var(--danger);
+}
+
+.stat-lowstock .stat-icon {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.stat-details h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.stat-details p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 2px 0 0;
+    font-weight: 500;
+}
+
+/* ============================================================
+   Tables
+   ============================================================ */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background: var(--gray-50);
+    color: var(--gray-600);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.table tbody td {
+    padding: 12px 16px;
+    vertical-align: middle;
+    font-size: 14px;
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.table tbody tr:hover {
+    background: var(--gray-50);
+}
+
+.table .fw-medium {
+    font-weight: 600;
+}
+
+/* ============================================================
+   Form Controls
+   ============================================================ */
+.form-control, .form-select {
+    border: 1.5px solid var(--gray-300);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.1);
+}
+
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 6px;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+    padding: 9px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    box-shadow: 0 4px 15px rgba(58, 134, 255, 0.25);
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(58, 134, 255, 0.4);
+}
+
+.btn-success {
+    background: var(--success);
+    border-color: var(--success);
+    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+}
+
+.btn-success:hover {
+    background: #059669;
+    border-color: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(16, 185, 129, 0.4);
+}
+
+.btn-warning {
+    background: var(--warning);
+    border-color: var(--warning);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(255, 159, 28, 0.25);
+}
+
+.btn-warning:hover {
+    background: #d97706;
+    border-color: #d97706;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(255, 159, 28, 0.4);
+}
+
+.btn-danger {
+    background: var(--danger);
+    border-color: var(--danger);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.25);
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+    border-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(239, 68, 68, 0.4);
+}
+
+.btn-info {
+    background: var(--info);
+    border-color: var(--info);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);
+}
+
+.btn-info:hover {
+    background: #0891b2;
+    border-color: #0891b2;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(6, 182, 212, 0.4);
+}
+
+.btn-outline-secondary {
+    border-color: var(--gray-300);
+    color: var(--gray-600);
+}
+
+.btn-outline-secondary:hover {
+    background: var(--gray-100);
+    border-color: var(--gray-400);
+    color: var(--gray-800);
+}
+
+.btn-sm {
+    padding: 5px 12px;
+    font-size: 13px;
+}
+
+.btn-lg {
+    padding: 12px 24px;
+    font-size: 16px;
+}
+
+/* ============================================================
+   Badges
+   ============================================================ */
+.badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* ============================================================
+   Pagination
+   ============================================================ */
+.pagination {
+    margin: 0;
+}
+
+.page-link {
+    color: var(--primary-blue);
+    border: 1px solid var(--gray-200);
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.page-item.active .page-link {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.page-item.disabled .page-link {
+    color: var(--gray-400);
+}
+
+/* ============================================================
+   Alerts
+   ============================================================ */
+.alert {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14px;
+}
+
+/* ============================================================
+   Code
+   ============================================================ */
+code {
+    background: var(--gray-100);
+    color: var(--gray-700);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+
+    .sidebar-brand span,
+    .sidebar-nav .nav-link span,
+    .sidebar-footer .nav-link span,
+    .admin-info span {
+        display: none;
+    }
+
+    .sidebar-nav .nav-link {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .topbar {
+        left: 60px;
+        padding: 0 16px;
+    }
+    .topbar-brand span {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 60px;
+        padding: 76px 16px 16px;
+    }
+
+    .stat-card {
+        padding: 14px;
+    }
+
+    .stat-details h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .topbar {
+        padding: 0 12px;
+    }
+    .topbar-brand span {
+        display: none;
+    }
+    .admin-badge span {
+        display: none;
+    }
+
+    .main-content {
+        padding: 72px 12px 12px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}
+
+/* ============================================================
+   ADMIN DASHBOARD — Full-Screen Background
+   ============================================================ */
+.admin-body {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.92)), url('../../img/campus.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* ============================================================
+   ADMIN DASHBOARD — Dark Table Theme
+   ============================================================ */
+.card.dashboard-card,
+.dashboard-card {
+    background: rgba(30, 41, 59, 0.7) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.dashboard-card .table thead th {
+    background: rgba(255, 255, 255, 0.04);
+    color: #e2e8f0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+.dashboard-card .table td,
+.dashboard-card .table th {
+    color: #e2e8f0 !important;
+    background: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+/* -------------------------------------------------------
+   TABLE ROW HOVER — Choose your preferred style below.
+   Comment/uncomment ONE option and remove the other.
+
+   Option A — Dark text on light hover (max readability)
+   Option B — White text on glowing translucent hover (premium glass look)
+   ------------------------------------------------------- */
+
+/* ---- Option A: Dark text on light hover ---- */
+.dashboard-card .table tbody tr:hover,
+.dashboard-card .table tbody tr:hover td {
+    color: #0f172a !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* ---- Option B: White text on translucent glow ---- */
+/* .dashboard-card .table tbody tr:hover,
+.dashboard-card .table tbody tr:hover td {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+} */
+.dashboard-card .table .text-muted,
+.dashboard-card .text-muted {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+.dashboard-card .badge.text-dark {
+    color: #1e293b !important;
+}
+.dashboard-card .badge.bg-secondary {
+    background: rgba(100, 116, 139, 0.65) !important;
+    color: #e2e8f0 !important;
+}
+.btn-warning.text-dark,
+.btn-info.text-dark {
+    color: #1e293b !important;
+}
+.dashboard-card .btn-outline-secondary {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+}
+.dashboard-card .btn-outline-secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+.dashboard-card .card-body {
+    color: #cbd5e1;
+}
+.dashboard-card .card-header,
+.dashboard-card .card-footer {
+    color: #cbd5e1;
+}
+.dashboard-card .form-control,
+.dashboard-card .form-select {
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+    color: #e2e8f0 !important;
+}
+.dashboard-card .form-control:focus,
+.dashboard-card .form-select:focus {
+    border-color: #3a86ff !important;
+    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.15) !important;
+}
+.dashboard-card .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.3) !important;
+}
+.dashboard-card .form-label {
+    color: #e2e8f0 !important;
+}
+.dashboard-card .pagination .page-link {
+    background: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+}
+.dashboard-card .pagination .page-item.active .page-link {
+    background: #3a86ff !important;
+    border-color: #3a86ff !important;
+    color: #ffffff !important;
+}
+.dashboard-card .pagination .page-item.disabled .page-link {
+    background: rgba(15, 23, 42, 0.3);
+    color: rgba(255, 255, 255, 0.3);
+}
+.dashboard-card .pagination .page-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+.dashboard-card code {
+    background: rgba(255, 255, 255, 0.08);
+    color: #93c5fd;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.main-content .alert {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.main-content .alert-success { border-left: 4px solid #10b981; }
+.main-content .alert-danger { border-left: 4px solid #ef4444; }
+.main-content .alert-warning { border-left: 4px solid #f59e0b; }
+.main-content .alert-info { border-left: 4px solid #06b6d4; }
+
+/* ============================================================
+   ADMIN DASHBOARD — Page Titles & Meta
+   ============================================================ */
+.main-content .page-title {
+    color: #ffffff;
+}
+.main-content .text-muted {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+.main-content h1, .main-content h2, .main-content h3,
+.main-content h4, .main-content h5, .main-content h6,
+.main-content p {
+    color: #e2e8f0;
+}
+
+/* ============================================================
+   FIX: Remove backdrop-blur from content children
+   Prevents "jhapsa" (blurry text) on Windows Chromium when
+   backdrop-filter is set on a translucent parent.
+   ============================================================ */
+.dashboard-card .card-header,
+.dashboard-card .card-body,
+.dashboard-card .card-footer,
+.dashboard-card .table,
+.dashboard-card .table *,
+.dashboard-card table,
+.dashboard-card table * {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+}
+
+/* Re-assert high-contrast table text */
+.dashboard-card .table th,
+.dashboard-card .table td {
+    color: #ffffff !important;
+    text-shadow: none !important;
+}
+
+/* ============================================================
+   HAMBURGER TOGGLE BUTTON (hidden on desktop)
+   ============================================================ */
+.sidebar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 2px 6px;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+.sidebar-toggle:hover {
+    color: #00f5d4;
+}
+
+/* ============================================================
+   OVERLAY BACKDROP
+   ============================================================ */
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1049;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.sidebar-backdrop.show {
+    display: block;
+    opacity: 1;
+}
+
+/* ============================================================
+   MOBILE: overlay sidebar (overrides 60 px icon-only mode)
+   ============================================================ */
+@media (max-width: 768px) {
+    /* Show hamburger */
+    .sidebar-toggle {
+        display: inline-flex !important;
+    }
+
+    /* Sidebar hidden off-screen by default, full-width overlay */
+    .sidebar {
+        left: -260px !important;
+        width: 250px !important;
+        transition: left 0.3s ease !important;
+        z-index: 1050 !important;
+    }
+    .sidebar.open {
+        left: 0 !important;
+    }
+
+    /* Restore text labels */
+    .sidebar-brand span,
+    .sidebar-nav .nav-link span,
+    .sidebar-footer .nav-link span,
+    .admin-info span {
+        display: inline !important;
+    }
+
+    /* Restore nav link layout to horizontal (icon + text) */
+    .sidebar-nav .nav-link {
+        justify-content: flex-start !important;
+        padding: 10px 16px 10px 20px !important;
+    }
+
+    /* Topbar fills full width */
+    .topbar {
+        left: 0 !important;
+    }
+
+    /* Main content fills full width */
+    .main-content {
+        margin-left: 0 !important;
+    }
+}
+
+/* Also apply at 576 px */
+@media (max-width: 576px) {
+    .sidebar {
+        left: -260px !important;
+        width: 250px !important;
+        transition: left 0.3s ease !important;
+        z-index: 1050 !important;
+    }
+    .sidebar.open {
+        left: 0 !important;
+    }
+
+    .sidebar-brand span,
+    .sidebar-nav .nav-link span,
+    .sidebar-footer .nav-link span,
+    .admin-info span {
+        display: inline !important;
+    }
+
+    .sidebar-nav .nav-link {
+        justify-content: flex-start !important;
+        padding: 10px 16px 10px 20px !important;
+    }
+
+    .topbar {
+        left: 0 !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+    }
+
+    .sidebar-toggle {
+        display: inline-flex !important;
+    }
+}
