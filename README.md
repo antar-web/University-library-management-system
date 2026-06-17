@@ -151,7 +151,7 @@ http://localhost/University library system/
 
 **Gopalganj Science and Technology University** — Department of Computer Science & Engineering
 
-- Project Supervisor: *[Faculty Name]*
+- Project Supervisor: Dr. Mrinal Kanti Baowaly( Associate Professor)
 - Developed as part of the **Database & Information Management System (DIMS)** course.
 
 ---
